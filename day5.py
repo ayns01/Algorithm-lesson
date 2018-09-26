@@ -40,6 +40,12 @@ def gcd(a, b):
         return gcd(b, a % b)
 print("GCD is ", gcd(60, 48))
 
+def gcd2(a, b):
+    while b != 0:
+        a,b = b, a % b
+    return a
+print(gcd2(60, 48))
+
 # LCM
 def lcm(a, b):
     return a * b / gcd(a, b)
